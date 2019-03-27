@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/Button1"
+        android:id="@+id/BotCadUsuario"
         android:layout_width="108dp"
         android:layout_height="168dp"
         android:layout_marginStart="8dp"
@@ -26,7 +29,7 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/BotCadProdu"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="108dp"
         android:layout_height="168dp"
@@ -49,7 +52,7 @@
         tools:shadowColor="FFFFFF" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/BotBuscaProd"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="108dp"
         android:layout_height="168dp"
@@ -72,7 +75,7 @@
         tools:shadowColor="FFFFFF" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/BotQualProd"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="108dp"
         android:layout_height="168dp"
@@ -95,7 +98,7 @@
         tools:shadowColor="FFFFFF" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/BotBuscMelhOfer"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="108dp"
         android:layout_height="168dp"
@@ -118,7 +121,7 @@
         tools:shadowColor="FFFFFF" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/BotExibHisComp"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="108dp"
         android:layout_height="168dp"
@@ -141,7 +144,7 @@
         tools:shadowColor="FFFFFF" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/BotComparPrec"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="108dp"
         android:layout_height="168dp"
@@ -164,7 +167,7 @@
         tools:shadowColor="FFFFFF" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/BotConfig"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="108dp"
         android:layout_height="168dp"
