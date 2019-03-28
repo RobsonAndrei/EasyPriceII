@@ -13,7 +13,7 @@ public class TelacadusuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_telacadusuario);
 
-        Button voltar = (Button) findViewById(R.id.buttonvoltar);
+        Button voltar = (Button) findViewById(R.id.buttvoltar);
 
         voltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +27,7 @@ public class TelacadusuarioActivity extends AppCompatActivity {
 
 
 
-        Button confirmDados = (Button)findViewById(R.id.buttonConfirDado);
+        Button confirmDados = (Button)findViewById(R.id.butomconfirmar);
 
     }
 }
