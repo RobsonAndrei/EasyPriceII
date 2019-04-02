@@ -2,11 +2,11 @@ package carlos.robson.easyprice.Dominio;
 
 public class Categoria {
 
-    private int codigoCategoria;
+    private int idCategoria;
     private String nomeCategoria;
 
     public int getCodigoCategoria(){
-        return this.codigoCategoria;
+        return this.idCategoria;
     }
 
     public String getNomeCategoria(){
@@ -14,6 +14,6 @@ public class Categoria {
     }
 
     public void setCodigoCategoria(int codigoCategoria){
-        this.codigoCategoria = codigoCategoria;
+        this.idCategoria = codigoCategoria;
     }
 }

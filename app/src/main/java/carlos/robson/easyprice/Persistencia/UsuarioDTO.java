@@ -1,17 +1,12 @@
-package carlos.robson.easyprice.Dominio;
+package carlos.robson.easyprice.Persistencia;
 
 /**
- * Classe que representa um objeto Usuario.
+ * Classe que representa um objeto de transferencia do usuário.
  */
-public class Usuario {
+public class UsuarioDTO {
 
     private String nome;
     private String cpf;
-
-    public Usuario(String nome, String cpf){
-        this.nome = nome;
-        this.cpf = cpf;
-    }
 
     public String getNome(){
         return nome;
