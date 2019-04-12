@@ -1,19 +1,25 @@
 package carlos.robson.easyprice;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
 
+public class MainActivity extends AppCompatActivity {
+    private FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button botaoCadUsuario = (Button) findViewById(R.id.BotCadUsuario);
+        Button botaoCadUsuario = (Button) findViewById(R.id.ButtCadastUsu);
 
         botaoCadUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Button botaoCadProduto = (Button) findViewById(R.id.BotCadProdu);
-        Button botaoBuscaProd = (Button) findViewById(R.id.BotBuscaProd);
-        Button botaoQualProd = (Button) findViewById(R.id.BotQualProd);
-        Button botaoExibHisComp = (Button) findViewById(R.id.BotExibHisComp);
-        Button botaoBuscMelhoOf = (Button) findViewById(R.id.BotBuscMelhOfer);
-        Button botaoComparaPre = (Button) findViewById(R.id.BotComparPrec);
-        Button botaoConfig = (Button) findViewById(R.id.BotConfig);
+        Button botaoCadProduto = (Button) findViewById(R.id.ButtCadastProd);
+        Button botaoBuscaProd = (Button) findViewById(R.id.ButtBuscaProd);
+        Button botaoQualProd = (Button) findViewById(R.id.ButtQualifPro);
+        Button botaoExibHisComp = (Button) findViewById(R.id.ButtExibiHist);
+        Button botaoBuscMelhoOf = (Button) findViewById(R.id.ButtBuscMelhorOfer);
+        Button botaoComparaPre = (Button) findViewById(R.id.ButtComparaPre);
+        Button botaoConfig = (Button) findViewById(R.id.Buttconfiguracoes);
     }
 }

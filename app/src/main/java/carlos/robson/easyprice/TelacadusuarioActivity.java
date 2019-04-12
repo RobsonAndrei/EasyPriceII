@@ -29,5 +29,11 @@ public class TelacadusuarioActivity extends AppCompatActivity {
 
         Button confirmDados = (Button)findViewById(R.id.butomconfirmar);
 
+
+
+    }
+
+    public void confirSalvaBancoOnClick(View view){
+
     }
 }
