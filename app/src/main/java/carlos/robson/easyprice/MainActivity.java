@@ -33,7 +33,19 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         Button botaoCadProduto = (Button) findViewById(R.id.ButtCadastProd);
+
+        botaoCadProduto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //setContentView(R.layout.activity_telacadusuario);
+                Intent it = new Intent(MainActivity.this, TelaCadProduto.class);
+                startActivity(it);
+            }
+        });
+
         Button botaoBuscaProd = (Button) findViewById(R.id.ButtBuscaProd);
         Button botaoQualProd = (Button) findViewById(R.id.ButtQualifPro);
         Button botaoExibHisComp = (Button) findViewById(R.id.ButtExibiHist);
