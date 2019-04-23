@@ -1,11 +1,13 @@
 package carlos.robson.easyprice.Persistencia;
 
+import java.sql.SQLException;
+
 /**
  * Interface que contém os métodos usados com o banco de dados.
  */
 public interface UsuarioDAO {
 
-    boolean incluir(UsuarioDTO usuario) throws ExceptionDAO;
+    int incluir(UsuarioDTO usuario) throws SQLException;
 
     void alterar(UsuarioDTO usuario) throws ExceptionDAO;
 
