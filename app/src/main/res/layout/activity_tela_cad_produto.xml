@@ -4,148 +4,145 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    android:orientation="vertical"
-    android:scrollbarAlwaysDrawHorizontalTrack="true"
-    tools:context=".MainActivity">
+    tools:context=".TelaCadProduto">
 
-    <Button
-        android:id="@+id/ButtBuscaProd"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="98dp"
-        android:layout_height="94dp"
+    <ImageView
+        android:id="@+id/imageViewcadproduto"
+        android:layout_width="382dp"
+        android:layout_height="75dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/logobuscprod"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        android:visibility="visible"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114"
-        tools:layout_constraintCircleRadius="20dp"
-        tools:layout_constraintDimensionRatio="20"
-        tools:shadowColor="FFFFFF" />
+        app:layout_constraintVertical_bias="0.012"
+        app:srcCompat="@drawable/cadproduto" />
 
     <Button
-        android:id="@+id/ButtCadastUsu"
-        android:layout_width="109dp"
-        android:layout_height="95dp"
+        android:id="@+id/buttonvoltarTCP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/cadusuario"
+        android:text="Voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.817"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintVertical_bias="0.92" />
 
     <Button
-        android:id="@+id/ButtCadastProd"
-        android:layout_width="108dp"
-        android:layout_height="93dp"
+        android:id="@+id/buttonConfirTCP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/cadasprodut"
+        android:text="Confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.278"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
+        app:layout_constraintVertical_bias="0.922" />
 
-    <Button
-        android:id="@+id/ButtBuscMelhorOfer"
-        android:layout_width="81dp"
-        android:layout_height="124dp"
+    <EditText
+        android:id="@+id/editTextnomeProd"
+        android:layout_width="379dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/buscarofert"
+        android:ems="10"
+        android:hint="Nome do produto:"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.145" />
 
-    <Button
-        android:id="@+id/ButtQualifPro"
-        android:layout_width="124dp"
-        android:layout_height="70dp"
+    <EditText
+        android:id="@+id/editTextcategoria"
+        android:layout_width="379dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/qualprodut"
+        android:ems="10"
+        android:hint="Categoria:"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.245" />
 
-    <Button
-        android:id="@+id/ButtExibiHist"
-        android:layout_width="105dp"
-        android:layout_height="120dp"
+    <EditText
+        android:id="@+id/editTextcategoria2"
+        android:layout_width="379dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/exibihist"
+        android:ems="10"
+        android:hint="Estabelecimento onde o produto esta sendo cadastrado:"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.783" />
+        app:layout_constraintVertical_bias="0.331" />
 
-    <Button
-        android:id="@+id/ButtComparaPre"
-        android:layout_width="129dp"
-        android:layout_height="106dp"
+    <EditText
+        android:id="@+id/editTextenderecoEsta"
+        android:layout_width="379dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/comparaprec"
+        android:ems="10"
+        android:hint="Endereço do estabelecimento:"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.43" />
 
-    <Button
-        android:id="@+id/Buttconfiguracoes"
-        android:layout_width="129dp"
-        android:layout_height="93dp"
+    <EditText
+        android:id="@+id/editTextValorProd"
+        android:layout_width="250dp"
+        android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/configuracoes"
+        android:ems="10"
+        android:hint="Valor do Produto R$:"
+        android:inputType="number"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
-
+        app:layout_constraintVertical_bias="0.525" />
 </android.support.constraint.ConstraintLayout>
-
-
-
-
