@@ -47,9 +47,36 @@ public class ProdutoDAODTO implements ProdutoDAO {
     @Override
     public List<ProdutoDTO> buscarPorNome(String nome) throws SQLException {
 
+        String sql = "SELECT * FROM PRODUTO WHERE NOME = " + "'" + nome + "'"; //busca pelo nome informado
+
+        List<ProdutoDTO> produtos = buscarProdutos(sql);
+
+        return produtos;
+    }
+
+    @Override
+    public List<ProdutoDTO> buscarPorCategoria(int codigoCategoria) throws SQLException {
+
+        String sql = "SELECT * FROM PRODUTO WHERE ID_CATEGORIA = " + codigoCategoria; //busca pelo nome informado
+
+        List<ProdutoDTO> produtos = buscarProdutos(sql);
+
+        return produtos;
+    }
+
+    public List<ProdutoDTO> buscarPorPreco(double preco) throws SQLException {
+
+        String sql = "SELECT * FROM PRODUTO WHERE PRECO = " + preco; //busca pelo nome informado
+
+        List<ProdutoDTO> produtos = buscarProdutos(sql);
+
+        return produtos;
+    }
+
+    private List<ProdutoDTO> buscarProdutos(String sql) throws SQLException {
+
         List<ProdutoDTO> produtos = new LinkedList<>();
 
-        String sql = "select * from usuarios where nome = " + nome; //busca pelo nome informado
         try (Connection conexao = InicializaBD.getConnection()) {
             try (Statement statement = conexao.createStatement()) {
                 try (ResultSet busca = statement.executeQuery(sql)) {
@@ -76,15 +103,5 @@ public class ProdutoDAODTO implements ProdutoDAO {
         }
 
         return produtos;
-    }
-
-    @Override
-    public List<ProdutoDTO> buscarPorCategoria(int codigoCategoria) throws SQLException {
-        return null;
-    }
-
-    @Override
-    public List<ProdutoDTO> buscarPorPreco(double preco) throws SQLException {
-        return null;
     }
 }
