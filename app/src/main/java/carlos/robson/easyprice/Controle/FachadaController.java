@@ -10,6 +10,10 @@ public class FachadaController {
 
     private CadastroController cadastro;
 
+    public FachadaController(){
+        cadastro = new CadastroController();
+    }
+
     public int cadastrarUsuario(Usuario usuario) throws Exception{
         return cadastro.cadastrarUsuario(usuario);
     }

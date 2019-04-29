@@ -6,11 +6,11 @@ public class Supermercado {
     private String latitude;
     private String longitude;
     private long telefone;
-    private long cpf;
+    private String cpf;
     private String nome;
 
     //ID_SUPERMERCADO, LATITUDE, LONGITUDE, TELEFONE, CPF, NOME
-    public Supermercado(String latitude, String longitude, long telefone, long cpf, String nome) {
+    public Supermercado(String latitude, String longitude, long telefone, String cpf, String nome) {
         this.latitude = latitude;
         this.longitude = longitude;
         this.telefone = telefone;
@@ -18,7 +18,7 @@ public class Supermercado {
         this.nome = nome;
     }
 
-    public Supermercado(int idSupermercado, String latitude, String longitude, long telefone, long cpf, String nome) {
+    public Supermercado(int idSupermercado, String latitude, String longitude, long telefone, String cpf, String nome) {
         this.idSupermercado = idSupermercado;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -31,7 +31,7 @@ public class Supermercado {
         return idSupermercado;
     }
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
@@ -51,7 +51,7 @@ public class Supermercado {
         return telefone;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

@@ -5,12 +5,13 @@ import java.sql.Date;
 public class ProdutoDTO {
 
     private String nome;
-    private long cpf;
+    private String cpf;
     private int idProduto;
     private int idSupermercado;
     private int idCategoria;
     private double preco;
     private Date ultAtualizacao;
+    private Date validade;
 
     public String getNome() {
         return nome;
@@ -20,11 +21,11 @@ public class ProdutoDTO {
         this.nome = nome;
     }
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -48,6 +49,8 @@ public class ProdutoDTO {
         return idCategoria;
     }
 
+    public Date getValidade() { return validade; }
+
     public void setIdCategoria(int idCategoria) {
         this.idCategoria = idCategoria;
     }
@@ -67,4 +70,6 @@ public class ProdutoDTO {
     public void setUltAtualizacao(Date ultAtualizacao) {
         this.ultAtualizacao = ultAtualizacao;
     }
+
+    public void setValidade(Date validade) { this.validade = validade;  }
 }

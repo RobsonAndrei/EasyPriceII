@@ -2,8 +2,14 @@ package carlos.robson.easyprice.Persistencia;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+
+import carlos.robson.easyprice.Dominio.Produto;
 
 public class ProdutoDAODTO implements ProdutoDAO {
 
@@ -22,10 +28,11 @@ public class ProdutoDAODTO implements ProdutoDAO {
                 statement.setInt(1, produto.getIdProduto());
                 statement.setString(2, produto.getNome());
                 statement.setDouble(3, produto.getPreco());
-                statement.setDate(4, produto.getUltAtualizacao());
-                statement.setLong(5, produto.getCpf());
-                statement.setInt(6, produto.getIdSupermercado());
-                statement.setInt(7, produto.getIdCategoria());
+                statement.setDate(4, produto.getValidade());
+                statement.setDate(5, produto.getUltAtualizacao());
+                statement.setString(6, produto.getCpf());
+                statement.setInt(7, produto.getIdSupermercado());
+                statement.setInt(8, produto.getIdCategoria());
                 //Executa o comando sql
                 resultado = statement.executeUpdate();
             }
@@ -39,7 +46,36 @@ public class ProdutoDAODTO implements ProdutoDAO {
 
     @Override
     public List<ProdutoDTO> buscarPorNome(String nome) throws SQLException {
-        return null;
+
+        List<ProdutoDTO> produtos = new LinkedList<>();
+
+        String sql = "select * from usuarios where nome = " + nome; //busca pelo nome informado
+        try (Connection conexao = InicializaBD.getConnection()) {
+            try (Statement statement = conexao.createStatement()) {
+                try (ResultSet busca = statement.executeQuery(sql)) {
+                    while (busca.next()) {
+
+                        ProdutoDTO produto = new ProdutoDTO();
+
+                        produto.setIdProduto(busca.getInt("ID_PRODUTO"));
+                        produto.setNome(busca.getString("NOME"));
+                        produto.setPreco(busca.getDouble("PRECO"));
+                        produto.setValidade(busca.getDate("DATA_VALIDADE"));
+                        produto.setUltAtualizacao(busca.getDate("ULT_ATUALIZACAO"));
+                        produto.setCpf(busca.getString("CPF"));
+                        produto.setIdSupermercado(busca.getInt("ID_SUPERMERCADO"));
+                        produto.setIdCategoria(busca.getInt("ID_CATEGORIA"));
+
+                        produtos.add(produto);
+                    }
+                }
+            }
+
+        } catch (SQLException ex) {
+            System.out.println("Erro: " + ex);
+        }
+
+        return produtos;
     }
 
     @Override

@@ -5,14 +5,19 @@ import java.sql.Date;
 public class Produto {
 
     private String nome;
-    private long cpf;
+    private String cpf;
     private int idProduto;
     private int idSupermercado;
     private int idCategoria;
     private double preco;
     private Date ultAtualizacao;
+    private Date validade;
 
-    public Produto(String nome, long cpf, int idProduto, int idSupermercado, int idCategoria, double preco, Date ultAtualizacao) {
+    public Produto(){
+
+    }
+
+    public Produto(String nome, String cpf, int idProduto, int idSupermercado, int idCategoria, double preco, Date ultAtualizacao, Date validade) {
         this.nome = nome;
         this.cpf = cpf;
         this.idProduto = idProduto;
@@ -20,6 +25,7 @@ public class Produto {
         this.idCategoria = idCategoria;
         this.preco = preco;
         this.ultAtualizacao = ultAtualizacao;
+        this.validade = validade;
     }
 
     public String getNome() {
@@ -30,11 +36,11 @@ public class Produto {
         this.nome = nome;
     }
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -58,6 +64,8 @@ public class Produto {
         return idCategoria;
     }
 
+    public Date getValidade() { return validade; }
+
     public void setIdCategoria(int idCategoria) {
         this.idCategoria = idCategoria;
     }
@@ -77,4 +85,6 @@ public class Produto {
     public void setUltAtualizacao(Date ultAtualizacao) {
         this.ultAtualizacao = ultAtualizacao;
     }
+
+    public void setValidade(Date validade) { this.validade = validade;  }
 }

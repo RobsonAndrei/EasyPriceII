@@ -5,14 +5,14 @@ package carlos.robson.easyprice.Persistencia;
  */
 public class UsuarioDTO {
 
-    private long cpf;
+    private String cpf;
     private String nome;
     private String login;
     private String senha;
     private int idade;
     private double salario;
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
@@ -36,7 +36,7 @@ public class UsuarioDTO {
         return salario;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

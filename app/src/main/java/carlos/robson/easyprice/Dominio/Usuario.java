@@ -5,14 +5,14 @@ package carlos.robson.easyprice.Dominio;
  */
 public class Usuario {
 
-    private long cpf;
+    private String cpf;
     private String nome;
     private String login;
     private String senha;
     private int idade;
     private double salario;
 
-    public Usuario(long cpf, String nome, String login, String senha, int idade, double salario) {
+    public Usuario(String cpf, String nome, String login, String senha, int idade, double salario) {
         this.cpf = cpf;
         this.nome = nome;
         this.login = login;
@@ -21,7 +21,7 @@ public class Usuario {
         this.salario = salario;
     }
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
@@ -45,7 +45,7 @@ public class Usuario {
         return salario;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

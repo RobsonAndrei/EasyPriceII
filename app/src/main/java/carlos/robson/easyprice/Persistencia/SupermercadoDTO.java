@@ -3,7 +3,7 @@ package carlos.robson.easyprice.Persistencia;
 public class SupermercadoDTO {
 
     private int idSupermercado;
-    private long cpf;
+    private String cpf;
     private String nome;
     private String latitude;
     private String longitude;
@@ -13,7 +13,7 @@ public class SupermercadoDTO {
         return idSupermercado;
     }
 
-    public long getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
@@ -37,7 +37,7 @@ public class SupermercadoDTO {
         this.idSupermercado = idSupermercado;
     }
 
-    public void setCpf(long cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 

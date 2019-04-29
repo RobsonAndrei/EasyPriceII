@@ -28,7 +28,7 @@ public class UsuarioDAODTO implements UsuarioDAO {
         try (Connection conexao = InicializaBD.getConnection()) {
             try (PreparedStatement statement = conexao.prepareStatement(sql)) {
                 //Seta os valores de cada campo
-                statement.setLong(1, usuario.getCpf());
+                statement.setString(1, usuario.getCpf());
                 statement.setString(2, usuario.getNome());
                 statement.setString(3, usuario.getLogin());
                 statement.setString(4, usuario.getSenha());

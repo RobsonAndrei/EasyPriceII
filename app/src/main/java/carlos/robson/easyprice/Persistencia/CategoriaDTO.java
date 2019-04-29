@@ -1,14 +1,9 @@
-package carlos.robson.easyprice.Dominio;
+package carlos.robson.easyprice.Persistencia;
 
-public class Categoria {
+public class CategoriaDTO {
 
     private int idCategoria;
     private String nomeCategoria;
-
-    public Categoria(int idCategoria, String nomeCategoria) {
-        this.idCategoria = idCategoria;
-        this.nomeCategoria = nomeCategoria;
-    }
 
     public int getIdCategoria(){
         return this.idCategoria;
@@ -25,4 +20,5 @@ public class Categoria {
     public void setNomeCategoria(String nomeCategoria) {
         this.nomeCategoria = nomeCategoria;
     }
+
 }
