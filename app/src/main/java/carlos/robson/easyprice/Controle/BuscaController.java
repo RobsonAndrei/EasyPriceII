@@ -16,6 +16,12 @@ public class BuscaController {
         produtoDAO = new ProdutoDAODTO();
     }
 
+    /**
+     * Método que busca produtos através do nome
+     * @param nome do produto a ser buscado
+     * @return produtos que conténham o nome informado
+     * @throws Exception
+     */
     List<Produto> buscarProdutosPorNome(String nome) throws Exception {
         List<ProdutoDTO> resultado = produtoDAO.buscarPorNome(nome);
 
@@ -24,6 +30,12 @@ public class BuscaController {
         return produtos;
     }
 
+    /**
+     * Método que busca produtos de acordo com a sua categoria
+     * @param codigoCategoria código da categoria usado como filtro
+     * @return produtos pertencentes a categoria informado
+     * @throws Exception
+     */
     List<Produto> buscarProdutosPorCategoria(int codigoCategoria) throws Exception{
         List<ProdutoDTO> resultado = produtoDAO.buscarPorCategoria(codigoCategoria);
 
@@ -32,6 +44,12 @@ public class BuscaController {
         return produtos;
     }
 
+    /**
+     * Método que busca produtos de acordo com o preço informado
+     * @param preco pretendido na busca
+     * @return produtos que estejam no preco informado
+     * @throws Exception
+     */
     List<Produto> buscarProdutosPorPreco(double preco) throws Exception{
         List<ProdutoDTO> resultado = produtoDAO.buscarPorPreco(preco);
 
@@ -41,7 +59,7 @@ public class BuscaController {
     }
 
     /**
-     * Método que renderiza os resultados após a busca no banco de dados
+     * Método privado que renderiza os resultados após a busca no banco de dados
      * @param produtos
      * @return
      */
