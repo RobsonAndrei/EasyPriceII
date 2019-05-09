@@ -10,13 +10,12 @@ import android.widget.EditText;
 
 
 public class FieldMoney extends EditText {
-    private
-    final KeylistenerNumber
-            io_key_listener = new KeylistenerNumber();
+
     /**
      * Indicativo de atualização do campo.
      */
     private boolean ib_update;
+
 
     /**
      * Construtor da classe.
@@ -63,6 +62,7 @@ public class FieldMoney extends EditText {
         //
         ComponenteInicializar();
     }
+
 
     /**
      * Inicializa o componente.
@@ -215,8 +215,9 @@ public class FieldMoney extends EditText {
         );
     }
 
-    private
-    class KeylistenerNumber extends NumberKeyListener {
+    private final KeylistenerNumber io_key_listener = new KeylistenerNumber();
+
+    private class KeylistenerNumber extends NumberKeyListener {
 
         public int getInputType() {
             return InputType.TYPE_CLASS_NUMBER | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
