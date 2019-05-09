@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "140283821480",
+    "firebase_url": "https://easypriceii.firebaseio.com",
+    "project_id": "easypriceii",
+    "storage_bucket": "easypriceii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140283821480:android:bf71ba11c0bbfdc7",
+        "android_client_info": {
+          "package_name": "carlos.robson.easyprice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140283821480-3c1ubj4pbq1hhrmlsn8bvh1isbupo8at.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "carlos.robson.easyprice",
+            "certificate_hash": "4a68dda5ecd85484a6e08179e533d654be788bdf"
+          }
+        },
+        {
+          "client_id": "140283821480-vaud2dei5pihmpmrf8jlsdtvk65e50ch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvPhVNHk4QzmFaAFYJE7LX_203M19gWeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140283821480-vaud2dei5pihmpmrf8jlsdtvk65e50ch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
