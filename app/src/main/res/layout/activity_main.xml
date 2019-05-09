@@ -1,150 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimaryWhite"
     android:orientation="vertical"
     android:scrollbarAlwaysDrawHorizontalTrack="true"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/ButtBuscaProd"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="98dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/logobuscprod"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        android:visibility="visible"
+    <ImageView
+        android:id="@+id/login_imagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/usuario"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="117dp" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.936"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114"
-        tools:layout_constraintCircleRadius="20dp"
-        tools:layout_constraintDimensionRatio="20"
-        tools:shadowColor="FFFFFF" />
+    <TextView
+        android:id="@+id/login_textViewLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="63dp"
+        android:text="Login"
+        android:textColor="@color/colorVerdeEscuro"
+        android:textSize="40sp" />
 
-    <Button
-        android:id="@+id/ButtCadastUsu"
-        android:layout_width="109dp"
-        android:layout_height="95dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/cadusuario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111" />
+    <EditText
+        android:id="@+id/login_textView_email"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_imagem"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:hint="Informe seu e-mail:..."
+        android:textSize="25sp" />
 
-    <Button
-        android:id="@+id/ButtCadastProd"
-        android:layout_width="108dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/cadasprodut"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
+
+    <EditText
+        android:id="@+id/login_textView_senha"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_textView_email"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:hint="Informe sua senha..."
+        android:inputType="numberPassword"
+        android:textSize="25sp" />
 
     <Button
-        android:id="@+id/ButtBuscMelhorOfer"
-        android:layout_width="81dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/buscarofert"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        android:id="@+id/login_button_logar"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_textView_senha"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorVerdeEscuro"
+        android:text="Logar"
+        android:textColor="@color/colorPrimaryWhite"
+        android:textSize="18sp" />
 
     <Button
-        android:id="@+id/ButtQualifPro"
-        android:layout_width="124dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/qualprodut"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.97"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        android:id="@+id/login_button_novoUsuario"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_textView_senha"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTintMode="screen"
+        android:shadowColor="@color/colorVerdeEscuro"
+        android:text="Novo usuário"
+        android:textColor="@color/colorYellow"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/ButtExibiHist"
-        android:layout_width="105dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/exibihist"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.262"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.783" />
 
-    <Button
-        android:id="@+id/ButtComparaPre"
-        android:layout_width="129dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/comparaprec"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43" />
-
-    <Button
-        android:id="@+id/Buttconfiguracoes"
-        android:layout_width="129dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/configuracoes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
-
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
 
 
 

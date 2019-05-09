@@ -23,39 +23,48 @@
         app:srcCompat="@drawable/cadproduto" />
 
     <Button
-        android:id="@+id/buttonvoltarTCP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/telacadProduto_button_voltar"
+        android:layout_width="135dp"
+        android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorVerdeEscuro"
         android:text="Voltar"
+        android:textColor="@color/colorPrimaryWhite"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.908" />
 
     <Button
-        android:id="@+id/buttonConfirTCP2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/telacadProduto_button_confirmar"
+        android:layout_width="138dp"
+        android:layout_height="49dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorVerdeEscuro"
         android:text="Confirmar"
+        android:textColor="@color/colorPrimaryWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922" />
+        app:layout_constraintVertical_bias="0.908" />
 
     <EditText
-        android:id="@+id/editTextnomeProd"
+        android:id="@+id/telacadProduto_editText_nomeProduto"
         android:layout_width="379dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -72,7 +81,7 @@
         app:layout_constraintVertical_bias="0.145" />
 
     <EditText
-        android:id="@+id/editTextcategoria"
+        android:id="@+id/telacadProduto_editText_categoria"
         android:layout_width="379dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -90,7 +99,7 @@
         app:layout_constraintVertical_bias="0.245" />
 
     <EditText
-        android:id="@+id/editTextcategoria2"
+        android:id="@+id/telacadProduto_editText_nomeMercado"
         android:layout_width="379dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -109,7 +118,7 @@
         app:layout_constraintVertical_bias="0.331" />
 
     <EditText
-        android:id="@+id/editTextenderecoEsta"
+        android:id="@+id/telacadProduto_editText_enderecomercado"
         android:layout_width="379dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -128,7 +137,7 @@
         app:layout_constraintVertical_bias="0.43" />
 
     <EditText
-        android:id="@+id/editTextValorProd"
+        android:id="@+id/telacadProduto_editText_valorProduto"
         android:layout_width="250dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"

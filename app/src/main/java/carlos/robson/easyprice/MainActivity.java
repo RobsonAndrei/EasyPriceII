@@ -5,52 +5,52 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private FirebaseAuth mAuth;
+    private ViewHolder mViewHolder = new ViewHolder();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
 
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button botaoCadUsuario = (Button) findViewById(R.id.ButtCadastUsu);
+        this.mViewHolder.login_textView_email = findViewById(R.id.login_textView_email);
+        this.mViewHolder.login_textView_senha = findViewById(R.id.login_textView_senha);
+        this.mViewHolder.login_button_logar = findViewById(R.id.login_button_logar);
 
-        botaoCadUsuario.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //setContentView(R.layout.activity_telacadusuario);
-                Intent it = new Intent(MainActivity.this, TelacadusuarioActivity.class);
-                startActivity(it);
-            }
-        });
+        this.mViewHolder.login_button_novoUsuario = findViewById(R.id.login_button_novoUsuario);
+        this.mViewHolder.login_button_novoUsuario.setOnClickListener(this);
 
 
-
-
-        Button botaoCadProduto = (Button) findViewById(R.id.ButtCadastProd);
-
-        botaoCadProduto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //setContentView(R.layout.activity_telacadusuario);
-                Intent it = new Intent(MainActivity.this, TelaCadProduto.class);
-                startActivity(it);
-            }
-        });
-
-        Button botaoBuscaProd = (Button) findViewById(R.id.ButtBuscaProd);
-        Button botaoQualProd = (Button) findViewById(R.id.ButtQualifPro);
-        Button botaoExibHisComp = (Button) findViewById(R.id.ButtExibiHist);
-        Button botaoBuscMelhoOf = (Button) findViewById(R.id.ButtBuscMelhorOfer);
-        Button botaoComparaPre = (Button) findViewById(R.id.ButtComparaPre);
-        Button botaoConfig = (Button) findViewById(R.id.Buttconfiguracoes);
     }
+
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.login_button_novoUsuario) {
+
+            //setContentView(R.layout.activity_telacadusuario);
+            Intent it = new Intent(MainActivity.this, TelacadusuarioActivity.class);
+            startActivity(it);
+        }
+
+
+    }
+
+    private static class ViewHolder {
+        EditText login_textView_email;
+        EditText login_textView_senha;
+        Button login_button_logar;
+        Button login_button_novoUsuario;
+
+
+    }
+
+
 }

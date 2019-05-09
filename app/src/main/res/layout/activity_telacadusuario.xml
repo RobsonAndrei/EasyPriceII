@@ -43,7 +43,7 @@
         app:srcCompat="@drawable/labelcadusuario" />
 
     <EditText
-        android:id="@+id/nomeCompleto"
+        android:id="@+id/telaCadUsuario_editText_nome"
         android:layout_width="346dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.158" />
 
     <EditText
-        android:id="@+id/emailtext"
+        android:id="@+id/telaCadUsuario_editText_email"
         android:layout_width="346dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
@@ -77,7 +77,7 @@
         app:layout_constraintVertical_bias="0.255" />
 
     <EditText
-        android:id="@+id/cpfusuario"
+        android:id="@+id/telaCadUsuario_editText_cpf"
         android:layout_width="346dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
@@ -107,7 +107,7 @@
         app:layout_constraintVertical_bias="0.403" />
 
     <EditText
-        android:id="@+id/nomeusuario"
+        android:id="@+id/telaCadUsuario_editText_nomeUsuario"
         android:layout_width="346dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -140,7 +140,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/senha"
+        android:id="@+id/telaCadUsuario_editText_senha"
         android:layout_width="347dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
@@ -174,7 +174,7 @@
         app:layout_constraintVertical_bias="0.59" />
 
     <EditText
-        android:id="@+id/confirmasenha"
+        android:id="@+id/telaCadUsuario_editText_confirmasenha"
         android:layout_width="346dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
@@ -239,7 +239,7 @@
         app:layout_constraintVertical_bias="0.313" />
 
     <Button
-        android:id="@+id/butomconfirmar"
+        android:id="@+id/telaCadUsuario_button_confirmar"
         android:layout_width="138dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
@@ -252,10 +252,15 @@
         app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorVerdeEscuro"
+        android:textColor="@color/colorOrange"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintVertical_bias="0.905" />
 
     <Button
-        android:id="@+id/buttvoltar"
+        android:id="@+id/telaCadUsuario_button_voltar"
         android:layout_width="144dp"
         android:layout_height="46dp"
         android:layout_marginStart="8dp"
@@ -268,6 +273,11 @@
         app:layout_constraintHorizontal_bias="0.103"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorVerdeEscuro"
+        android:textColor="@color/colorPrimaryWhite"
+        android:textSize="18sp"
         app:layout_constraintVertical_bias="0.905" />
+
 
 </android.support.constraint.ConstraintLayout>
