@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Classse que cria a conexão com o banco de dados.
+ * Classse que abre a conexão com o banco de dados.
  */
 class InicializaBD {
 

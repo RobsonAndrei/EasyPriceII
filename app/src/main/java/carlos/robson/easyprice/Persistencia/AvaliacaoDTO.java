@@ -1,8 +1,8 @@
-package carlos.robson.easyprice.Dominio;
+package carlos.robson.easyprice.Persistencia;
 
 import java.sql.Date;
 
-public class Avaliacao {
+public class AvaliacaoDTO {
 
     private int idAvaliacao;
     private String comentario;
@@ -12,17 +12,6 @@ public class Avaliacao {
     private int idCategoria;
     private int idSupermercado;
     private String cpf;
-
-    public Avaliacao(int idAvaliacao, String comentario, double nota, Date dataAvaliacao, int idProduto, int idCategoria, int idSupermercado, String cpf) {
-        this.idAvaliacao = idAvaliacao;
-        this.comentario = comentario;
-        this.nota = nota;
-        this.dataAvaliacao = dataAvaliacao;
-        this.idProduto = idProduto;
-        this.idCategoria = idCategoria;
-        this.idSupermercado = idSupermercado;
-        this.cpf = cpf;
-    }
 
     public int getIdAvaliacao() {
         return idAvaliacao;
