@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent it = new Intent(MainActivity.this, TelacadusuarioActivity.class);
             startActivity(it);
         }
+        if (v.getId() == R.id.login_button_logar) {
+            //lógica da operação
+        }
 
 
     }

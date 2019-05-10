@@ -36,5 +36,48 @@
         android:foreground="@drawable/buscarofert"
         android:foregroundTintMode="add" />
 
+    <Button
+        android:id="@+id/menu_button_comparaPrecos"
+        android:layout_width="105dp"
+        android:layout_height="104dp"
+        android:layout_below="@+id/menu_button_cadastrarProduto"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorPrimaryWhite"
+        android:foreground="@drawable/comparaprec" />
+
+    <Button
+        android:id="@+id/menu_button_exibHist"
+        android:layout_width="103dp"
+        android:layout_height="122dp"
+        android:layout_below="@id/menu_button_buscarProduto"
+        android:layout_marginLeft="159dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorPrimaryWhite"
+        android:foreground="@drawable/exibihist" />
+
+    <Button
+        android:id="@+id/menu_button_configuracoes"
+        android:layout_width="116dp"
+        android:layout_height="84dp"
+        android:layout_below="@+id/menu_button_buscarMelhorOferta"
+        android:layout_marginLeft="282dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorPrimaryWhite"
+        android:foreground="@drawable/configuracoes" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="72dp"
+        android:layout_below="@+id/menu_button_exibHist"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/colorPrimaryWhite"
+        android:foreground="@drawable/qualprodut" />
+
 
 </RelativeLayout>

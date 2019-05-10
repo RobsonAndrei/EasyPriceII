@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".BuscaMelhorOfer"></activity>
+        <activity android:name=".ComparaPrecos" />
+        <activity android:name=".Configuracao" />
+        <activity android:name=".ExibHistorico" />
+        <activity android:name=".QualificarProduct" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".TelaCadProduto" />
         <activity android:name=".TelacadusuarioActivity" />

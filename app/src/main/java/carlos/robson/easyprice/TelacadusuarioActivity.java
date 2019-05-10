@@ -19,9 +19,10 @@ public class TelacadusuarioActivity extends AppCompatActivity implements View.On
         this.mViewHolder.telaCadUsu_editText_nomeCompletoUsuario = findViewById(R.id.telaCadUsuario_editText_nome);
         this.mViewHolder.telaCadUsu_editText_email = findViewById(R.id.telaCadUsuario_editText_email);
         this.mViewHolder.telaCadUsu_editText_cpf = findViewById(R.id.telaCadUsuario_editText_cpf);
-        this.mViewHolder.telaCadUsu_editText_nomeUsuario = findViewById(R.id.telaCadUsuario_editText_nomeUsuario);
+        this.mViewHolder.telaCadUsu_editText_idade = findViewById(R.id.telaCadUsuario_editText_idade);
         this.mViewHolder.telaCadUsu_editText_senha = findViewById(R.id.telaCadUsuario_editText_senha);
         this.mViewHolder.telaCadUsu_editText_confirSenha = findViewById(R.id.telaCadUsuario_editText_confirmasenha);
+        this.mViewHolder.telaCadUsu_editText_fxSalarial = findViewById(R.id.telaCadUsuario_editText_fxsalarial);
 
         this.mViewHolder.telaCadUsu_button_confirmar = findViewById(R.id.telaCadUsuario_button_confirmar);
 
@@ -45,10 +46,10 @@ public class TelacadusuarioActivity extends AppCompatActivity implements View.On
         EditText telaCadUsu_editText_nomeCompletoUsuario;
         EditText telaCadUsu_editText_email;
         EditText telaCadUsu_editText_cpf;
-        EditText telaCadUsu_editText_nomeUsuario;
+        EditText telaCadUsu_editText_idade;
         EditText telaCadUsu_editText_senha;
         EditText telaCadUsu_editText_confirSenha;
-
+        EditText telaCadUsu_editText_fxSalarial;
         Button telaCadUsu_button_voltar;
         Button telaCadUsu_button_confirmar;
 
