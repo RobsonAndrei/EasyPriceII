@@ -7,15 +7,15 @@ public class Usuario {
 
     private String cpf;
     private String nome;
-    private String login;
+    private String email;
     private String senha;
     private int idade;
     private double salario;
 
-    public Usuario(String cpf, String nome, String login, String senha, int idade, double salario) {
+    public Usuario(String cpf, String nome, String emai, String senha, int idade, double salario) {
         this.cpf = cpf;
         this.nome = nome;
-        this.login = login;
+        this.email = emai;
         this.senha = senha;
         this.idade = idade;
         this.salario = salario;
@@ -30,7 +30,7 @@ public class Usuario {
     }
 
     public String getLogin() {
-        return login;
+        return email;
     }
 
     public String getSenha() {
@@ -54,7 +54,7 @@ public class Usuario {
     }
 
     public void setLogin(String login) {
-        this.login = login;
+        this.email = login;
     }
 
     public void setSenha(String senha) {
