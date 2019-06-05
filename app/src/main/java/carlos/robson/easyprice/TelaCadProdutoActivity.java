@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-public class TelaCadProduto extends AppCompatActivity implements View.OnClickListener {
+public class TelaCadProdutoActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewHolder mViewHolder = new ViewHolder();
 
@@ -18,6 +18,7 @@ public class TelaCadProduto extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cad_produto);
 
+        //Populando as variáveis de acordo com o que foi informado na tela
         this.mViewHolder.telaCadProduto_editText_nomeProduto = findViewById(R.id.telacadProduto_editText_nomeProduto);
         this.mViewHolder.telaCadProduto_editText_categoria = findViewById(R.id.telacadProduto_editText_categoria);
         this.mViewHolder.telaCadProduto_editText_nomeMercado = findViewById(R.id.telacadProduto_editText_nomeMercado);
@@ -26,21 +27,19 @@ public class TelaCadProduto extends AppCompatActivity implements View.OnClickLis
 
         this.mViewHolder.telacadProduto_button_confirma = findViewById(R.id.telacadProduto_button_confirmar);
         this.mViewHolder.telacadProduto_button_voltar = findViewById(R.id.telacadProduto_button_voltar);
-
-
     }
 
 
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.telacadProduto_button_voltar) {
-            Intent it = new Intent(TelaCadProduto.this, MenuActivity.class);
+            Intent it = new Intent(TelaCadProdutoActivity.this, MenuActivity.class);
             startActivity(it);
         }
-
     }
 
     private static class ViewHolder {
+
         EditText telaCadProduto_editText_nomeProduto;
         EditText telaCadProduto_editText_categoria;
         EditText telaCadProduto_editText_nomeMercado;
@@ -48,11 +47,7 @@ public class TelaCadProduto extends AppCompatActivity implements View.OnClickLis
         EditText telaCadProduto_editText_valorProduto;
         Button telacadProduto_button_confirma;
         Button telacadProduto_button_voltar;
-
-
     }
-
-
 }
 
 

@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -15,14 +16,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BuscaMelhorOfer"></activity>
-        <activity android:name=".ComparaPrecos" />
+        <activity android:name=".TelaBuscarMelhorOfertaActivity"></activity>
+        <activity android:name=".TelaCompararProdutosActivity" />
         <activity android:name=".Configuracao" />
-        <activity android:name=".ExibHistorico" />
-        <activity android:name=".QualificarProduct" />
+        <activity android:name=".TelaExibirHistoricoActivity" />
+        <activity android:name=".TelaAvaliarProdutoActivity" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".TelaCadProduto" />
-        <activity android:name=".TelacadusuarioActivity" />
+        <activity android:name=".TelaCadProdutoActivity" />
+        <activity android:name=".TelaCadUsuarioActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>

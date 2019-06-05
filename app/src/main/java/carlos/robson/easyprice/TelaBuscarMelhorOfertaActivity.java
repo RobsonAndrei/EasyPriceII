@@ -3,11 +3,11 @@ package carlos.robson.easyprice;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ComparaPrecos extends AppCompatActivity {
+public class TelaBuscarMelhorOfertaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_compara_precos);
+        setContentView(R.layout.activity_busca_melhor_ofer);
     }
 }

@@ -31,7 +31,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.menu_button_cadastrarProduto) {
-            Intent it = new Intent(MenuActivity.this, TelaCadProduto.class);
+            Intent it = new Intent(MenuActivity.this, TelaCadProdutoActivity.class);
             startActivity(it);
 
         }
