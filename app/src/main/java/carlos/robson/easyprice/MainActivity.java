@@ -51,26 +51,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v.getId() == R.id.login_button_novoUsuario) {
 
-           // System.out.println("CLICOUUUU");
-           // AcessoRest ar = new AcessoRest();
-
-            //String caminhoURL = "http://54.232.197.19:8080/ApiEasyPrice/api/usuario";
-
-            //String responseAgora = ar.get(caminhoURL);
-
-            //alert.setMessage(responseAgora);
-
-            //alert.show();
-
-            //System.out.println("RESULTADO: " + responseAgora.toString());
-            //Log.i("RESPOSTA: ", responseAgora);
-
-            setContentView(R.layout.activity_telacadusuario);
+            //Redireciona para a tela de cadastro do usuário
+             setContentView(R.layout.activity_telacadusuario);
              Intent it = new Intent(MainActivity.this, TelaCadUsuarioActivity.class);
              startActivity(it);
         }
         if (v.getId() == R.id.login_button_logar) {
             //lógica da operação
+
         }
 
 
