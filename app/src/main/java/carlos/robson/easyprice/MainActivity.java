@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import carlos.robson.easyprice.Service.AcessoRest;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private FirebaseAuth mAuth;
+
     private ViewHolder mViewHolder = new ViewHolder();
     private AlertDialog alert;
 
@@ -52,12 +52,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (v.getId() == R.id.login_button_novoUsuario) {
 
             //Redireciona para a tela de cadastro do usuário
-             setContentView(R.layout.activity_telacadusuario);
              Intent it = new Intent(MainActivity.this, TelaCadUsuarioActivity.class);
              startActivity(it);
         }
         if (v.getId() == R.id.login_button_logar) {
-            //lógica da operação
+
+            String email = mViewHolder.login_textView_email.getText().toString();
+            String senha = mViewHolder.login_textView_senha.getText().toString();
+
+            if(email.isEmpty()){
+                alert.setTitle("Atenção");
+                alert.setMessage("Campo EMAIL não informado");
+                alert.show();
+            } else if(senha.isEmpty()){
+                alert.setTitle("Atenção");
+                alert.setMessage("Campo SENHA não informado");
+                alert.show();
+            } else {
+                String []login = {email, senha};
+
+                //chamada do método de login via REST
+            }
 
         }
 

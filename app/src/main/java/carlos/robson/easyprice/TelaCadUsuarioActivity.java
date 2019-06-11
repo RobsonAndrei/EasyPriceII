@@ -8,15 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.sql.SQLException;
 import java.util.InputMismatchException;
-
 import carlos.robson.easyprice.Service.AcessoRest;
-
-//import carlos.robson.easyprice.Controle.FachadaController;
-//import carlos.robson.easyprice.Dominio.Usuario;
-//import carlos.robson.easyprice.Utilitario.Utils;
 
 public class TelaCadUsuarioActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -122,6 +115,16 @@ public class TelaCadUsuarioActivity extends AppCompatActivity implements View.On
                     alert.setTitle("Sucesso");
                     alert.setMessage("Usuário cadastrado");
                     alert.show();
+
+                    final Intent it = new Intent(TelaCadUsuarioActivity.this, MenuActivity.class);
+
+                    alert.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    startActivity(it);;
+                                }
+                            });
+
                 } else {
                     alert.setTitle("Erro");
                     alert.setMessage("Problema no cadastro de usuário");

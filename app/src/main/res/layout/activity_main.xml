@@ -49,7 +49,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="25dp"
         android:hint="Informe sua senha..."
-        android:inputType="numberPassword"
+        android:inputType="number|numberPassword|textWebPassword"
         android:textSize="25sp" />
 
     <Button
