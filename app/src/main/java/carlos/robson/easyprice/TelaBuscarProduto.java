@@ -30,7 +30,7 @@ public class TelaBuscarProduto  extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar_produto);
 
-        String resultado = acessoRest.get("http://54.232.197.19:8080/ApiEasyPrice/api/categoriaproduto");
+        String resultado = acessoRest.get("http://54.232.197.19:8080/EasyPrice/api/categoriaproduto");
 
         System.out.println("Resultado do GET " + resultado);
 

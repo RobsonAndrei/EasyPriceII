@@ -55,7 +55,6 @@ public class TelaCadUsuarioActivity extends AppCompatActivity implements View.On
             Intent it = new Intent(TelaCadUsuarioActivity.this, MainActivity.class);
             startActivity(it);
 
-            System.out.println("Entrou no primeiro if");
         } else if (v.getId() == R.id.telaCadUsuario_button_confirmar) {
 
             String cpf = mViewHolder.telaCadUsu_editText_cpf.getText().toString();
@@ -111,24 +110,35 @@ public class TelaCadUsuarioActivity extends AppCompatActivity implements View.On
 
                 String response = acessoRest.postUsuario(objetos);
 
-                if (response.equals("200")) {
-                    alert.setTitle("Sucesso");
-                    alert.setMessage("Usuário cadastrado");
-                    alert.show();
+               System.out.println("RESPONSE AQ: " + response);
 
-                    final Intent it = new Intent(TelaCadUsuarioActivity.this, MenuActivity.class);
+                switch (response) {
 
-                    alert.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int which) {
-                                    startActivity(it);;
-                                }
-                            });
+                    case "1":
+                        alert.setTitle("Sucesso");
+                        alert.setMessage("Cadastro efetuado com sucesso");
+                        alert.show();
 
-                } else {
-                    alert.setTitle("Erro");
-                    alert.setMessage("Problema no cadastro de usuário");
-                    alert.show();
+                        final Intent it = new Intent(TelaCadUsuarioActivity.this, MenuActivity.class);
+
+                        alert.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        startActivity(it);
+                                        ;
+                                    }
+                                });
+                        break;
+                    case "-1":
+                        alert.setTitle("Erro");
+                        alert.setMessage("Este email já está sendo usado por outra conta");
+                        alert.show();
+                        break;
+                    case "-2":
+                        alert.setTitle("Erro");
+                        alert.setMessage("CPF já cadastrado");
+                        alert.show();
+                        break;
                 }
             }
         }

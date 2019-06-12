@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.gson.JsonObject;
+
+import org.json.JSONObject;
 
 import carlos.robson.easyprice.Service.AcessoRest;
 
@@ -18,11 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ViewHolder mViewHolder = new ViewHolder();
     private AlertDialog alert;
+    AcessoRest ar = new AcessoRest();
+    JSONObject jsonLogado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        AcessoRest ar = new AcessoRest();
 
         alert = new AlertDialog.Builder(MainActivity.this).create();
         alert.setTitle("");
@@ -39,23 +43,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.mViewHolder.login_textView_email = findViewById(R.id.login_textView_email);
         this.mViewHolder.login_textView_senha = findViewById(R.id.login_textView_senha);
-        this.mViewHolder.login_button_logar = findViewById(R.id.login_button_logar);
+        this.mViewHolder.login_button_logar = findViewById(R.id.login_button_entrar);
 
-        this.mViewHolder.login_button_novoUsuario = findViewById(R.id.login_button_novoUsuario);
+        this.mViewHolder.login_button_novoUsuario = findViewById(R.id.login_button_cadastrar);
         this.mViewHolder.login_button_novoUsuario.setOnClickListener(this);
 
     }
 
-
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.login_button_novoUsuario) {
+        if (v.getId() == R.id.login_button_cadastrar) {
 
             //Redireciona para a tela de cadastro do usuário
              Intent it = new Intent(MainActivity.this, TelaCadUsuarioActivity.class);
              startActivity(it);
-        }
-        if (v.getId() == R.id.login_button_logar) {
+        } else if (v.getId() == R.id.login_button_entrar) {
 
             String email = mViewHolder.login_textView_email.getText().toString();
             String senha = mViewHolder.login_textView_senha.getText().toString();
@@ -69,14 +71,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 alert.setMessage("Campo SENHA não informado");
                 alert.show();
             } else {
-                String []login = {email, senha};
 
-                //chamada do método de login via REST
+                String[] login = {email, senha};
+
+                String resposta = ar.login(login);
+
+                if (resposta.isEmpty()) {
+                    alert.setTitle("Atenção");
+                    alert.setMessage("Credenciais de acesso incorretas!");
+                    alert.show();
+                } else {
+                    try
+                    {
+                        jsonLogado = new JSONObject(resposta);
+                                                
+                        Intent it = new Intent(MainActivity.this, MenuActivity.class);
+                        startActivity(it);
+
+                    } catch (Exception e) {
+                        System.out.println("Erro: " + e.getLocalizedMessage());
+                    }
+                }
             }
-
         }
-
-
     }
 
     private static class ViewHolder {
