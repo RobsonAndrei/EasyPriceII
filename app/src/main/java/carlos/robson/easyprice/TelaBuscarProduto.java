@@ -14,6 +14,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import carlos.robson.easyprice.Service.AcessoRest;
 
@@ -22,6 +23,7 @@ public class TelaBuscarProduto  extends AppCompatActivity implements View.OnClic
     AlertDialog alert;
     Spinner mSpinner;
     ArrayList<String> categoria = new ArrayList<>();
+    HashMap<String, String> itens = new HashMap<>();
     AcessoRest acessoRest = new AcessoRest();
     ViewHolder mViewHolder = new ViewHolder();
 

@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import carlos.robson.easyprice.Sessao.SessaoUsuario;
+
 public class MenuActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ViewHolder mViewHolder = new ViewHolder();
@@ -16,6 +18,9 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        System.out.println("Email logado: " + SessaoUsuario.getEmailUsuarioLogado());
+        System.out.println("Cpf logado: " + SessaoUsuario.getCpfUsuarioLogado());
+
         //this.mViewHolder.menu_button_buscaProduto = findViewById(R.id.menu_button_buscarProduto);
         //this.mViewHolder.menu_button_buscarMoferta = findViewById(R.id.menu_button_buscarMelhorOferta);
         //this.mViewHolder.menu_button_cadastrProduto.setOnClickListener(this);
@@ -25,10 +30,10 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.menu_button_buscarProduto) {
-            Intent it = new Intent(MenuActivity.this, TelaCadProdutoActivity.class);
-            startActivity(it);
-        } else if(v.getId() == R.id.menu_button_buscarProduto){
             Intent it = new Intent(MenuActivity.this, TelaBuscarProduto.class);
+            startActivity(it);
+        } else if(v.getId() == R.id.menu_button_cadastrarProduto){
+            Intent it = new Intent(MenuActivity.this, TelaCadProdutoActivity.class);
             startActivity(it);
         } else if(v.getId()== R.id.menu_button_buscarMelhorOferta){
            // Intent it = new Intent(MenuActivity.this, TelaBuscarMelhorOfertaActivity.this);

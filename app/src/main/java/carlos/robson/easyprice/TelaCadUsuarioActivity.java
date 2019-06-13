@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import java.util.InputMismatchException;
 import carlos.robson.easyprice.Service.AcessoRest;
+import carlos.robson.easyprice.Sessao.SessaoUsuario;
 
 public class TelaCadUsuarioActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -120,6 +121,8 @@ public class TelaCadUsuarioActivity extends AppCompatActivity implements View.On
                         alert.show();
 
                         final Intent it = new Intent(TelaCadUsuarioActivity.this, MenuActivity.class);
+
+                        SessaoUsuario sessao = new SessaoUsuario(email, cpf);
 
                         alert.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
                                 new DialogInterface.OnClickListener() {

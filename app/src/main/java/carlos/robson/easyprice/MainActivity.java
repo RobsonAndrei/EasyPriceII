@@ -14,9 +14,11 @@ import android.widget.EditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.gson.JsonObject;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import carlos.robson.easyprice.Service.AcessoRest;
+import carlos.robson.easyprice.Sessao.SessaoUsuario;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -81,16 +83,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     alert.setMessage("Credenciais de acesso incorretas!");
                     alert.show();
                 } else {
-                    try
-                    {
-                        jsonLogado = new JSONObject(resposta);
-                                                
+
+                    try {
+                        JSONObject jsonUsuario = new JSONObject(resposta);
+
+                        SessaoUsuario sessaoUsuario = new SessaoUsuario(email, jsonUsuario.getString("cpf"));
+
+                    }catch(JSONException jex){
+                        System.out.println("Excecao json: " + jex.getMessage());
+                    }
                         Intent it = new Intent(MainActivity.this, MenuActivity.class);
                         startActivity(it);
 
-                    } catch (Exception e) {
-                        System.out.println("Erro: " + e.getLocalizedMessage());
-                    }
                 }
             }
         }

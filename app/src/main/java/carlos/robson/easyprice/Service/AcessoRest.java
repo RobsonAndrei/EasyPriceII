@@ -64,7 +64,7 @@ public class AcessoRest {
 
             bufferedReader.close();
 
-            System.out.println("CONTENT: " + content.toString());
+            System.out.println("CONTENT:" + content.toString());
 
         } catch(MalformedURLException mfex){
             System.out.println("********ERRO 2" + mfex.getMessage());
@@ -72,7 +72,64 @@ public class AcessoRest {
             System.out.println("******** ERRO aqui ******** " + ioex.toString());
         }
 
-        return String.valueOf(content);
+        return content.toString().trim();
+    }
+
+    public String postProduto(String []objetos){
+        StringBuilder content = new StringBuilder();
+        String urlCaminho = "http://54.232.197.19:8080/EasyPrice/api/produto";
+        int responseCode = -1;
+
+        URL url;
+        try {
+
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+            StrictMode.setThreadPolicy(policy);
+
+            url = new URL(urlCaminho);
+
+            HttpURLConnection client = (HttpURLConnection) url.openConnection();
+
+            client.setRequestMethod("POST");
+            client.setRequestProperty("Content-type", "application/json");
+            client.setRequestProperty("Accept", "application/json");
+            client.setDoOutput(true);
+
+            //Populando o JSON para POST
+            String jsonPost = "{\"nome\":\""+objetos[0].toString()+"\",\"cpf\":\""+objetos[1].toString()+"\",\"preco\":"+objetos[2].toString()+",\"ult_atualizacao\":\""+objetos[3].toString()+"\",\"data_validade\":"+objetos[4].toString()+",\"id_supermercado\":"+objetos[5].toString()+",\"id_categoria\":"+objetos[6]+"}";
+
+            System.out.println("JSON: " + jsonPost);
+
+            //POST
+            DataOutputStream writer = new DataOutputStream(client.getOutputStream());
+            writer.writeBytes(jsonPost);
+            writer.flush();
+            writer.close();
+
+            responseCode = client.getResponseCode();
+
+            System.out.println("NÚMERO DA RESPOSTA: " + responseCode);
+
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(client.getInputStream()));
+
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null) {
+                content.append(line + "\n");
+            }
+
+            bufferedReader.close();
+
+            System.out.println("CONTENT:" + content.toString());
+
+        } catch(MalformedURLException mfex){
+            System.out.println("********ERRO 2" + mfex.getMessage());
+        }catch(IOException ioex){
+            System.out.println("******** ERRO aqui ******** " + ioex.toString());
+        }
+
+        return content.toString().trim();
     }
 
     public String login(String []dadosLogin){
@@ -153,7 +210,6 @@ public class AcessoRest {
 
             while ((line = bufferedReader.readLine()) != null) {
                 content.append(line + "\n");
-                System.out.println("LÁ NA CLASSE ACESSO REST: " + line);
             }
 
             bufferedReader.close();
