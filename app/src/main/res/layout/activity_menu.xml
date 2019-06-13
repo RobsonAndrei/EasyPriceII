@@ -1,89 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:hapticFeedbackEnabled="false"
     tools:context=".MenuActivity">
 
     <Button
+        android:id="@+id/menu_button_cadastrarSupermercado"
+        android:layout_width="176dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Cadastrar supermercado"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.688" />
+
+    <Button
         android:id="@+id/menu_button_cadastrarProduto"
-        android:layout_width="103dp"
-        android:layout_height="95dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="#00FFFFFF"
-        android:backgroundTintMode="add"
-        android:foreground="@drawable/cadasprodut"
-        android:onClick="onClick" />
-
-    <Button
-        android:id="@+id/menu_button_buscarProduto"
-        android:layout_width="103dp"
-        android:layout_height="95dp"
-        android:layout_marginLeft="158dp"
-        android:layout_marginTop="80dp"
-        android:backgroundTint="#00FFFFFF"
-        android:backgroundTintMode="add"
-        android:foreground="@drawable/logobuscprod"
-        android:onClick="onClick" />
-
-    <Button
-        android:id="@+id/menu_button_buscarMelhorOferta"
-        android:layout_width="wrap_content"
-        android:layout_height="139dp"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="60dp"
-        android:backgroundTint="#00FFFFFF"
-        android:backgroundTintMode="add"
-        android:foreground="@drawable/buscarofert"
-        android:foregroundTintMode="add"
-        android:onClick="onClick" />
-
-    <Button
-        android:id="@+id/menu_button_comparaPrecos"
-        android:layout_width="105dp"
-        android:layout_height="104dp"
-        android:layout_below="@+id/menu_button_cadastrarProduto"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="27dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="@color/colorPrimaryWhite"
-        android:foreground="@drawable/comparaprec"
-        android:onClick="onClick" />
+        android:layout_width="176dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
+        android:text="Cadastrar Produto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.135" />
 
     <Button
         android:id="@+id/menu_button_exibHist"
-        android:layout_width="103dp"
-        android:layout_height="122dp"
-        android:layout_below="@id/menu_button_buscarProduto"
-        android:layout_marginLeft="159dp"
-        android:layout_marginTop="27dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="@color/colorPrimaryWhite"
-        android:foreground="@drawable/exibihist" />
-
-    <Button
-        android:id="@+id/menu_button_configuracoes"
-        android:layout_width="116dp"
-        android:layout_height="84dp"
-        android:layout_below="@+id/menu_button_buscarMelhorOferta"
-        android:layout_marginLeft="282dp"
-        android:layout_marginTop="27dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="@color/colorPrimaryWhite"
-        android:foreground="@drawable/configuracoes"
-        android:onClick="onClick" />
+        android:layout_width="176dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
+        android:text="Exibir histórico de compras"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503" />
 
     <Button
         android:id="@+id/menu_button_qualificarProduto"
-        android:layout_width="120dp"
-        android:layout_height="72dp"
-        android:layout_below="@+id/menu_button_exibHist"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="41dp"
-        android:background="@drawable/button_background"
-        android:backgroundTint="@color/colorPrimaryWhite"
-        android:foreground="@drawable/qualprodut" />
+        android:layout_width="176dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
+        android:text="Qualificar produto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.504" />
+
+    <Button
+        android:id="@+id/menu_button_sair"
+        android:layout_width="176dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Sair"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <Button
+        android:id="@+id/menu_button_buscarMelhorOferta"
+        android:layout_width="176dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
+        android:text="Buscar melhores ofertas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <Button
+        android:id="@+id/menu_button_comparaPrecos"
+        android:layout_width="176dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
+        android:text="Comparar preços"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <Button
+        android:id="@+id/menu_button_buscarProduto"
+        android:layout_width="176dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClick"
+        android:text="Buscar produto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.963"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
 
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
