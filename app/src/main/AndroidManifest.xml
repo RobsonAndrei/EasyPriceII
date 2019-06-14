@@ -2,23 +2,54 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="carlos.robson.easyprice">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
     <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <permission
+        android:name="carlos.robson.easyprice.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="carlos.robson.easyprice.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- Permissao para acessar internet -->
+    <!--         Permissoes normais para o uso do GoogleMaps na aplicação -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Permissao para salvar dados no sdcard -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Permissao para usar o GPS por triangulacao de antenas -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Permissao para utilizar GPS por hardware -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissao para ler o estado da rede -->
+    <!--         O device precisa suportar a OpenGL ES versao 2 ou mais atual -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
-        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Easy Price"
+
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".TelaBuscarProduto"></activity>
-        <activity android:name=".TelaBuscarMelhorOfertaActivity"></activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".TelaBuscarProduto" />
+        <activity android:name=".TelaBuscarMelhorOfertaActivity" />
         <activity android:name=".TelaCompararProdutosActivity" />
         <activity android:name=".Configuracao" />
         <activity android:name=".TelaExibirHistoricoActivity" />

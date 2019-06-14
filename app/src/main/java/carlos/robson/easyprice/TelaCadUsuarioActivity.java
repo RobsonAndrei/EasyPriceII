@@ -36,6 +36,8 @@ public class TelaCadUsuarioActivity extends AppCompatActivity implements View.On
         this.mViewHolder.telaCadUsu_button_confirmar = findViewById(R.id.telaCadUsuario_button_confirmar);
 
         this.mViewHolder.telaCadUsu_button_voltar = findViewById(R.id.telaCadUsuario_button_voltar);
+
+        this.mViewHolder.telaCadUsu_button_voltar.setOnClickListener(this);
         this.mViewHolder.telaCadUsu_button_confirmar.setOnClickListener(this);
 
         //Instanciando o alert

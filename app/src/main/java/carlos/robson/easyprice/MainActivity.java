@@ -5,14 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -49,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.mViewHolder.login_button_novoUsuario = findViewById(R.id.login_button_cadastrar);
         this.mViewHolder.login_button_novoUsuario.setOnClickListener(this);
+        this.mViewHolder.login_button_logar.setOnClickListener(this);
 
     }
 
@@ -88,6 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         JSONObject jsonUsuario = new JSONObject(resposta);
 
                         SessaoUsuario sessaoUsuario = new SessaoUsuario(email, jsonUsuario.getString("cpf"));
+
+                        Intent it = new Intent(MainActivity.this, MenuActivity.class);
+                        startActivity(it);
 
                     }catch(JSONException jex){
                         System.out.println("Excecao json: " + jex.getMessage());

@@ -135,7 +135,7 @@ public class AcessoRest {
     public String login(String []dadosLogin){
 
         StringBuilder content = new StringBuilder();
-        String urlCaminho = "http://54.232.197.19:8080/EasyPrice/api/usuario/login";
+        String urlCaminho = "http://54.232.197.19:8080/EasyPrice/api/usuario";
         int responseCode = -1;
 
         URL url;
